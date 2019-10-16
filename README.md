@@ -5,10 +5,10 @@ Simple toolbox to house some Scripts
 ### nexusPull
 This script will pull artifacts from a nexus repo based on a configuration file. A secrets file contains the ftp user and ftp password. This script currently rusn from a mac, because of the SFTP issues i've had it opens a FileZilla window, so some manual input is required atm. For unix replace all fillzilla mentions with sftp (or other protocol) and use -b batchfile to move artifacts over
 Configuration is in XML - example items:
-<version>52.0.2</version> - version to download
+`<version>52.0.2</version> - version to download
 <host>Hostname</host> - Current WIP to work alongside automate deployment.bat
 <dirname>deploy/</dirname> - Remote directory
-<zipName>application.zip</zipName> - Zip file name, WIP to work alongside automate deployment.bat
+<zipName>application.zip</zipName> - Zip file name, WIP to work alongside automate deployment.bat`
 
 ### CheckPackages
 This has a few functions that are highlighted from the top of the shell script
@@ -23,7 +23,7 @@ When transferring files to the RDP session this script will pick up the artifact
 
 ### Download.py
 This works alongside nexusPull to retrieve artifacts from a nexus repo. This works from an XML config file in the format of:
-<?xml version="1.0"?>
+`<?xml version="1.0"?>
   <applications>
     <application>APPNAME</application>
       <repo>http://repourl/repo/foo/blah</repo>
@@ -35,5 +35,5 @@ This works alongside nexusPull to retrieve artifacts from a nexus repo. This wor
         <name>secondartifactName</name>
         <extension>.jar</extension>
       </artifact>
-  </applications>
+  </applications>`
 Add extra artifact blobs for each artifact you want to download
