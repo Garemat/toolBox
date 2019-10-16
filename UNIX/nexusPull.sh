@@ -1,4 +1,7 @@
 #! /bin/bash
+#This will pull artifacts from a nexus repo and push them to a host using ftp, in this case the host is listening to a change in the 'deploy' folder
+#When the go file is created it will being deployment
+
 if ! command -v python3 &>/dev/null; then
   echo "Python 3 not detected, please install"
   exit 1;
